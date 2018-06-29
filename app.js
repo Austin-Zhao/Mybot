@@ -48,15 +48,16 @@ client.on("message", async message => {
   // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
   // command = say
   // args = ["Is", "this", "the", "real", "life?"]
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  
-  // Let's go with a few common example commands! Feel free to delete or change those.
+  var  args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  var  command = args.shift().toLowerCase();
+
   if (command ==="reset"){
 	message.delete().catch(O_o=>{}); 
 	choose=false;
-    
+    command ='purge';
+    args='100';
   }
+  
   if (command ==="start"){
 	message.delete().catch(O_o=>{}); 
 	if (!choose)
