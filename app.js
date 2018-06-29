@@ -55,7 +55,7 @@ client.on("message", async message => {
 	message.delete().catch(O_o=>{}); 
 	choose=false;
     command ='purge';
-    args='100';
+    args='103';
   }
   
   if (command ==="start"){
